@@ -8,6 +8,7 @@ using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
+using System.Threading;
 
 namespace ConsoleApplication3
 {
@@ -44,9 +45,14 @@ namespace ConsoleApplication3
             catch(Exception e) {
                 throw new Exception("failed to fill uername");
             }
-
+            Thread.Sleep(2000);
+            try
+            { 
             passwordElement.SendKeys(password);
-
+            }
+            catch(Exception e) {
+                throw new Exception("faile to fill password");
+            }
         }
 
         public class YanivException: Exception
