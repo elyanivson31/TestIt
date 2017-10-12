@@ -55,7 +55,7 @@ namespace ConsoleApplication3
                 if (StringContainsOutOfStock.Contains("outOfStock"))
                     Assert.Fail("Still Out Of Stock");
                 else
-                    Assert.Fail("iPhone 7 32GB  Back in Stock! ");
+                    Assert.Pass("iPhone 7 32GB  Back in Stock! ");
                 
             }
         }
